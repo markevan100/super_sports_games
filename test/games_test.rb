@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/games'
-require './lib/event'
+require '../lib/games'
+require '../lib/event'
 
 class GamesTest < Minitest::Test
   def test_it_exists
@@ -35,6 +35,7 @@ class GamesTest < Minitest::Test
   end
 
   def test_it_can_create_a_single_event_summary
+
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     games = Games.new(2017)
     expected = "Curling        41                  18                  26.6                8.28"
@@ -42,6 +43,7 @@ class GamesTest < Minitest::Test
   end
 
   def test_it_can_create_a_summary_for_all_events
+
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     ring_toss = Event.new("Ring Toss", [23, 22, 29, 18, 30])
     games = Games.new(2017)
@@ -53,6 +55,7 @@ class GamesTest < Minitest::Test
   end
 
   def test_it_can_create_a_summary_for_the_games
+    
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     ring_toss = Event.new("Ring Toss", [23, 22, 29, 18, 30])
     games = Games.new(2017)
